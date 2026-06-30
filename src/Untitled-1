@@ -1,0 +1,40 @@
+<header style={{
+  background: "#111", position: "sticky", top: 0, zIndex: 1000,
+  display: "flex", justifyContent: "space-between", alignItems: "center",
+  padding: "0 48px", height: "68px",
+  boxShadow: "0 1px 0 rgba(255,255,255,0.06)",
+}}>
+  <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+    <img src={logo} alt="CDW" style={{
+      width: "44px", height: "44px", borderRadius: "50%",
+      objectFit: "cover", border: "2px solid #c9000a",
+    }} />
+    <div>
+      <div style={{ color: "white", fontWeight: 800, fontSize: "14px", letterSpacing: "2px", textTransform: "uppercase" }}>
+        Car Deal Warehouse
+      </div>
+      <div style={{ color: "#c9000a", fontSize: "9px", letterSpacing: "2px", textTransform: "uppercase", marginTop: "1px" }}>
+        Drive Away Today
+      </div>
+    </div>
+  </div>
+  <div style={{ display: "flex", alignItems: "center", gap: "36px" }}>
+    <span onClick={() => setSelectedCar(null)} style={{ color: "#aaa", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase", cursor: "pointer" }}
+      onMouseEnter={(e) => { e.currentTarget.style.color = "white"; }}
+      onMouseLeave={(e) => { e.currentTarget.style.color = "#aaa"; }}>Home</span>
+    <span onClick={() => navigate("/vehicles")} style={{ color: "#aaa", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase", cursor: "pointer" }}
+      onMouseEnter={(e) => { e.currentTarget.style.color = "white"; }}
+      onMouseLeave={(e) => { e.currentTarget.style.color = "#aaa"; }}>Buy Cars</span>
+    <span onClick={() => navigate("/finance")} style={{ color: "#aaa", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase", cursor: "pointer" }}
+      onMouseEnter={(e) => { e.currentTarget.style.color = "white"; }}
+      onMouseLeave={(e) => { e.currentTarget.style.color = "#aaa"; }}>Finance</span>
+    <span onClick={() => { setScrollTarget("contact"); setSelectedCar(null); }} style={{ color: "#aaa", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase", cursor: "pointer" }}
+      onMouseEnter={(e) => { e.currentTarget.style.color = "white"; }}
+      onMouseLeave={(e) => { e.currentTarget.style.color = "#aaa"; }}>Contact</span>
+    <button onClick={() => navigate("/finance")} style={{
+      background: "#c9000a", color: "white", border: "none", borderRadius: "3px",
+      padding: "10px 24px", cursor: "pointer", fontWeight: 700,
+      fontSize: "11px", letterSpacing: "1.5px", textTransform: "uppercase",
+    }}>Apply Now</button>
+  </div>
+</header>
